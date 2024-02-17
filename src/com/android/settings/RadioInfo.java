@@ -1540,26 +1540,22 @@ public class RadioInfo extends Activity {
         imsVolteProvisionedSwitch.setOnCheckedChangeListener(null);
         imsVolteProvisionedSwitch.setChecked(isImsVolteProvisioned());
         imsVolteProvisionedSwitch.setOnCheckedChangeListener(mImsVolteCheckedChangeListener);
-        imsVolteProvisionedSwitch.setEnabled(!Build.IS_USER
-                && mImsManager.isVolteEnabledByPlatform(mPhone.getContext()));
+        imsVolteProvisionedSwitch.setEnabled(false);
 
         imsVtProvisionedSwitch.setOnCheckedChangeListener(null);
         imsVtProvisionedSwitch.setChecked(isImsVtProvisioned());
         imsVtProvisionedSwitch.setOnCheckedChangeListener(mImsVtCheckedChangeListener);
-        imsVtProvisionedSwitch.setEnabled(!Build.IS_USER
-                && mImsManager.isVtEnabledByPlatform(mPhone.getContext()));
+        imsVtProvisionedSwitch.setEnabled(false);
 
         imsWfcProvisionedSwitch.setOnCheckedChangeListener(null);
         imsWfcProvisionedSwitch.setChecked(isImsWfcProvisioned());
         imsWfcProvisionedSwitch.setOnCheckedChangeListener(mImsWfcCheckedChangeListener);
-        imsWfcProvisionedSwitch.setEnabled(!Build.IS_USER
-                && mImsManager.isWfcEnabledByPlatform(mPhone.getContext()));
+        imsWfcProvisionedSwitch.setEnabled(false);
 
         eabProvisionedSwitch.setOnCheckedChangeListener(null);
         eabProvisionedSwitch.setChecked(isEabProvisioned());
         eabProvisionedSwitch.setOnCheckedChangeListener(mEabCheckedChangeListener);
-        eabProvisionedSwitch.setEnabled(!Build.IS_USER
-                && isEabEnabledByPlatform(mPhone.getContext()));
+        eabProvisionedSwitch.setEnabled(false);
     }
 
     OnClickListener mDnsCheckButtonHandler = new OnClickListener() {
